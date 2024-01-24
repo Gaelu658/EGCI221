@@ -1,0 +1,24 @@
+#include <iostream>
+#include <iomanip>
+#define SIZE 10
+
+using namespace std;
+
+int main(){
+int n,i;
+int *p;
+cout<<“How many numbers needed?”;
+cin>> n;
+p=new int[n];
+for(i=0;i<n;i++) {
+        cout<<"Input value"<<i<<":";
+        cin>>*p;
+        p++;
+}
+
+for(i=0;i<n;i++) {
+        cout<<*p<<endl;p++;
+}
+p-=n;
+delete [] p;
+}
